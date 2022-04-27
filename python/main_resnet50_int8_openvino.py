@@ -29,8 +29,6 @@ from CifarDataLoader import CifarDataLoader
 
 model_config = Dict({
     'model_name': 'flower_clas',
-    # 'model': "E:\\Text_Model\\flowerclas\\flower_clas.xml",
-    # 'weights': "E:\\Text_Model\\flowerclas\\flower_clas.bin"
     'model': "E:\\Text_Model\\flowerclas20220427\\flower_clas.xml",
     'weights': "E:\\Text_Model\\flowerclas20220427\\flower_clas.bin"
 })
@@ -40,7 +38,8 @@ engine_config = Dict({
     'eval_requests_number': 2
 })
 dataset_config = {
-    'data_source': "E:\\Text_dataset\\flowers102\\val_list.txt"
+    'data_source': "E:\\Text_dataset\\flowers102\\val_list.txt",
+    'path': "E:\\Text_dataset\\flowers102\\"
 }
 algorithms = [
     {

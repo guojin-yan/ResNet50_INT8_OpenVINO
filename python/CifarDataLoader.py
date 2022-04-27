@@ -20,8 +20,8 @@ class CifarDataLoader(DataLoader):
         Initialize config and dataset.
         :param config: created config with DATA_DIR path.
         """
-        path = config['data_source']
-        self.indexes, self.pictures, self.labels = self.load_data(path)
+        self.path = config['path']
+        self.indexes, self.pictures, self.labels = self.load_data(config['data_source'])
 
     def __len__(self):
         return len(self.labels)
@@ -52,7 +52,7 @@ class CifarDataLoader(DataLoader):
 
         idx = 0
         for path in pictures_path:
-            src = cv2.imread("E:/Text_dataset/flowers102/"+path)
+            src = cv2.imread(self.path + path)
             image = cv2.cvtColor(src, cv2.COLOR_BGR2RGB)
             image = image/255.0
             image = cv2.resize(image, (224, 224), interpolation=cv2.INTER_AREA)  # [82 202 255]>[51 228 254]
