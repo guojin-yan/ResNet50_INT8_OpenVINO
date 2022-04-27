@@ -1,8 +1,8 @@
 {
     "model": {
         "model_name": "flower_clas",
-        "model": "E:/Text_Model/flowerclas/flower_clas.xml",
-        "weights": "E:/Text_Model/flowerclas/flower_clas.bin"
+        "model": "E:\\Text_Model\\flowerclas20220427\\flower_clas.xml",
+        "weights": "E:\\Text_Model\\flowerclas20220427\\flower_clas.bin"
     },
     "engine": {
         "config": "./ResNet50.yaml"
